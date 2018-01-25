@@ -1,6 +1,41 @@
 #+TITLE: Django Logging
 
-* Logger
-* Handlers
-* Filters
-* Formatters
+* Logging
+** A quick logging primer
+*** The cast of players
+*** Loggers
+*** Handlers
+*** Filters
+*** Formatters
+** Using logging
+   #+begin_src python
+     import logging
+
+     logger = logging.getlogger(__name__)
+
+
+     def my_view(request, arg1, arg):
+         if bad_mojo:
+             # Log an error message
+             logger.error('Something went wrong!')
+   #+end_src
+*** Naming loggers
+*** Making logging calls
+** Configuring logging
+*** Examples
+    #+begin_src python
+    #+end_src
+*** Custom logging configuration
+*** Disabling logging configuration
+** Django’s logging extensions
+*** Loggers
+**** django
+**** django.request
+**** django.server
+**** django.template
+**** django.db.backends
+**** django.security.*
+**** django.db.backends.schema
+*** Handlers
+*** Filters
+** Django’s default logging configuration
